@@ -2,19 +2,23 @@ package com.guoyizeng.projecttemplate.ui.activity;
 
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.view.MenuItem;
 
 import com.guoyizeng.mvpbase.ui.activity.BaseActivity;
 import com.guoyizeng.projecttemplate.R;
 import com.guoyizeng.projecttemplate.contract.MainContract;
 import com.guoyizeng.projecttemplate.presenter.MainPresenter;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-    }
+
+    @BindView(R.id.bnv_tab_group)
+    BottomNavigationView bnvTabGroup;
 
     @Override
     protected int setLayoutResId() {
@@ -23,11 +27,17 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void initView() {
-
     }
 
     @Override
-    public void onNetworkError() {
-
+    protected void initListener() {
+        bnvTabGroup.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        return true;
+                    }
+                });
     }
+
 }

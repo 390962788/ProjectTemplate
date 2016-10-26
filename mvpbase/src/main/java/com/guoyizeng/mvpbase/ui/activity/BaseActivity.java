@@ -27,4 +27,5 @@ public abstract class BaseActivity<PresenterType extends Presenter> extends Nucl
 
     protected abstract int setLayoutResId();
     protected abstract void initView();
+    protected abstract void initListener();
 }

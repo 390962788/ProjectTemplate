@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/fastjsonconverter" />
             <option value="$PROJECT_DIR$/mvpbase" />
+            <option value="$PROJECT_DIR$/umeng" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

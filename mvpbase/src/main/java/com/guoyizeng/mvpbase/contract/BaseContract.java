@@ -8,10 +8,6 @@ public interface BaseContract {
 
     //提供UI 层的契约接口
     interface View {
-        /**
-         * 通用的网络接口请求失败事件
-         * */
-        void onNetworkError();
 
     }
 
