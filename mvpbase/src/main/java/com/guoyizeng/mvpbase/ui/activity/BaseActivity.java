@@ -23,6 +23,7 @@ public abstract class BaseActivity<PresenterType extends Presenter> extends Nucl
         setContentView(setLayoutResId());
         ButterKnife.bind(this);
         initView();
+        initListener();
     }
 
     protected abstract int setLayoutResId();
