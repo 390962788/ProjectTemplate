@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.guoyizeng.projecttemplate">
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +10,10 @@
         android:name=".App"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activity.MainActivity">
+        </activity>
+
+        <activity android:name=".ui.activity.H5PayDemoActivity"></activity>
+        <activity android:name=".ui.activity.PayDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
