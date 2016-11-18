@@ -1,4 +1,4 @@
-package com.guoyizeng.alipay;
+package com.wsloan.alipay;
 
 import org.junit.Test;
 

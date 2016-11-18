@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.guoyizeng.alipay.AlipayUtil;
-import com.guoyizeng.alipay.PermissionUtil;
 import com.guoyizeng.projecttemplate.R;
 import com.guoyizeng.projecttemplate.ui.activity.H5PayDemoActivity;
 

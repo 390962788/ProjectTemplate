@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/fastjsonconverter" />
             <option value="$PROJECT_DIR$/mvpbase" />
             <option value="$PROJECT_DIR$/umeng" />
+            <option value="$PROJECT_DIR$/xmpp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

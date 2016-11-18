@@ -1,9 +1,13 @@
-package com.guoyizeng.projecttemplate.ui.activity;
+package com.wsloan.alipay;
+
+import com.alipay.sdk.app.PayTask;
+import com.alipay.sdk.util.H5PayResultModel;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,7 +18,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-
 
 public class H5PayDemoActivity extends Activity {
 
@@ -88,6 +91,15 @@ public class H5PayDemoActivity extends Activity {
 		}
 	}
 
+	@Override
+	public void finish() {
+		super.finish();
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+	}
 
 	private class MyWebViewClient extends WebViewClient {
 
@@ -97,7 +109,28 @@ public class H5PayDemoActivity extends Activity {
 				return true;
 			}
 
-			AlipayUtil.h5PayResult(H5PayDemoActivity.this,url,mWebView);
+			final PayTask task = new PayTask(H5PayDemoActivity.this);
+			final String ex = task.fetchOrderInfoFromH5PayUrl(url);
+			if (!TextUtils.isEmpty(ex)) {
+				System.out.println("paytask:::::" + url);
+				new Thread(new Runnable() {
+					public void run() {
+						System.out.println("payTask:::" + ex);
+						final H5PayResultModel result = task.h5Pay(ex, true);
+						if (!TextUtils.isEmpty(result.getReturnUrl())) {
+							H5PayDemoActivity.this.runOnUiThread(new Runnable() {
+								
+								@Override
+								public void run() {
+									view.loadUrl(result.getReturnUrl());
+								}
+							});
+						}
+					}
+				}).start();
+			} else {
+				view.loadUrl(url);
+			}
 			return true;
 		}
 	}
