@@ -30,15 +30,28 @@ import com.wsloan.alipay.util.OrderInfoUtil2_0;
 public class PayDemoActivity extends FragmentActivity {
 	
 	/** 支付宝支付业务：入参app_id */
-	public static final String APPID = "";
+	public static final String APPID = "2016102802377649";
 	
 	/** 支付宝账户登录授权业务：入参pid值 */
-	public static final String PID = "";
+	public static final String PID = "2088102559805432";
 	/** 支付宝账户登录授权业务：入参target_id值 */
-	public static final String TARGET_ID = "";
+	public static final String TARGET_ID = "2016102802377649";
 
 	/** 商户私钥，pkcs8格式 */
-	public static final String RSA_PRIVATE = "";
+	public static final String RSA_PRIVATE = "MIICeQIBADANBgkqhkiG9w0BAQEFAASCAmMwggJfAgEAAoGBAMm4H6kripJDVf6k\n" +
+			"ZJZdBuQlmfb6RrUMGKJoGU1QRUCxF3LtEE7+J8F0mW+twxVsMdFW2nIuAXD1kZwm\n" +
+			"Wj9c6Cbg5fEVnoNBXv5AIsTGVpBUhVkZM0K+EeIEfNqdaEBRMAhteaWqdrL7OWNF\n" +
+			"istNWcOupcaQuRyoKJuHo5hVtHvbAgMBAAECgYEAjNpWsUfIEO2X5KFh42S95R0k\n" +
+			"b0K/kLgLk4vg7w137f46g3Npid8KX5lNcqAAsrrD5oshKc1aEEhJDqHxLoFvUEip\n" +
+			"qkGM6U5jwsxzFP/WB9XGj8nzlQ2vz5ZwZxpBLGTOykZwF0UU+AL9kw1+Vlow6/kc\n" +
+			"pDC57LG5yNBOIX6d84ECQQDwaKm8J9v+VAVosf3zgRgJX2xJ82a8JpGF8oRBh0WJ\n" +
+			"XFc1VrW+giZtVKdiHNuKwMs/wyAenOkEfP8wANi1sE5hAkEA1s0f52F90CTdyXpp\n" +
+			"srH7fShgsgG2vkfsmoLglkII4MJSaewmTTPsvZG6P7mur5e3aAu802/N2ZWONgJx\n" +
+			"gQcbuwJBAMj5hiPAYp3LmbX7TmQ5YGG9fuaXbyQNTgxfQAcT0aLSKilx8n9viDZP\n" +
+			"1Zokq7fkEkWcloZhAD97S03S91d0KyECQQCcWWyKh+0DD4KcP80l8+VBgZ14lETH\n" +
+			"FiVDhlYhKOm7Z9aDIQ/0DAKbLbKq5eYgC8fFJR4JrQzh/rkn2PlzWJA3AkEA1o1y\n" +
+			"m9kxfVuG23i15hcCYk/ixgRXucDsNJmhuNcSNxrmokPU/pVit/fuYHao8EBSSUNu\n" +
+			"+ChhPxUVq0HYjMp3cQ==";
 	
 	private static final int SDK_PAY_FLAG = 1;
 	private static final int SDK_AUTH_FLAG = 2;

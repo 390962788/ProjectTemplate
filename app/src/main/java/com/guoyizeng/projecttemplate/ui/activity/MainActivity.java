@@ -1,6 +1,7 @@
 package com.guoyizeng.projecttemplate.ui.activity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,6 +11,7 @@ import com.guoyizeng.mvpbase.ui.activity.BaseActivity;
 import com.guoyizeng.projecttemplate.R;
 import com.guoyizeng.projecttemplate.contract.MainContract;
 import com.guoyizeng.projecttemplate.presenter.MainPresenter;
+import com.wsloan.alipay.PayDemoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,6 +21,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @BindView(R.id.bnv_tab_group)
     BottomNavigationView bnvTabGroup;
+
 
     @Override
     protected int setLayoutResId() {
@@ -31,10 +34,13 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void initListener() {
+        bnvTabGroup = (BottomNavigationView) findViewById(R.id.bnv_tab_group);
         bnvTabGroup.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        Intent intent = new Intent(MainActivity.this,PayDemoActivity.class);
+                        startActivity(intent);
                         return true;
                     }
                 });
