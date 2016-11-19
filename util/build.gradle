@@ -1,10 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -17,26 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    /*signingConfigs {
-        myConfig {
-            storeFile     file("../sign/kmkey")
-            storePassword rootProject.ext.signingConfig.storePassword
-            keyAlias      rootProject.ext.signingConfig.keyAlias
-            keyPassword   rootProject.ext.signingConfig.keyPassword
-        }
-    }*/
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile rootProject.ext.deps.supportV7
+    compile rootProject.ext.deps.util
     testCompile rootProject.ext.deps.junit
-    compile rootProject.ext.deps.butterknife
-    compile project(path: ':mvpbase')
-    compile project(path: ':fastjsonconverter')
-    compile project(path: ':alipay')
 }

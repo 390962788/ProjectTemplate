@@ -1,1 +1,1 @@
-include ':app', ':mvpbase', ':fastjsonconverter', ':umeng', ':xmpp', ':alipay'
+include ':app', ':mvpbase', ':fastjsonconverter', ':umeng', ':xmpp', ':alipay', ':util'

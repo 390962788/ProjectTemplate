@@ -1,17 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
     }
     buildTypes {
         release {
@@ -26,18 +23,16 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:design:25.0.0'
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    testCompile 'junit:junit:4.12'
 
-    compile 'info.android15.nucleus:nucleus:4.0.0'
-    compile 'info.android15.nucleus:nucleus-support-v4:4.0.0'
-    compile 'info.android15.nucleus:nucleus-support-v7:4.0.0'
-
-    compile 'io.reactivex:rxjava:1.1.6'
-    compile 'io.reactivex:rxandroid:1.2.1'
-
-    compile 'com.jakewharton:butterknife:8.4.0'
+    compile rootProject.ext.deps.nucleus
+    compile rootProject.ext.deps.nucleus_supportV4
+    compile rootProject.ext.deps.nucleus_supportV7
+    compile rootProject.ext.deps.design
+    compile rootProject.ext.deps.supportV7
+    compile rootProject.ext.deps.rxandroid
+    compile rootProject.ext.deps.rxjava
+    compile rootProject.ext.deps.butterknife
+    testCompile rootProject.ext.deps.junit
 
 
 }
