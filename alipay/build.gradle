@@ -26,4 +26,5 @@ dependencies {
     compile rootProject.ext.deps.supportV7
     testCompile rootProject.ext.deps.junit
     compile files('libs/alipaySdk-20161009.jar')
+    compile project(path: ':rxbus')
 }

@@ -9,6 +9,19 @@ import rx.subjects.Subject;
 
 /**
  * 使用方法
+ *
+ * 发送方：
+ * RxBus.getDefault().post("11111");
+ *
+ *
+ * 接收方：
+ * RxBus.getDefault().subscribe(String.class, new Action1<String>() {
+        @Override
+        public void call(String payResult) {
+            Toast.makeText(getContext(),payResult,Toast.LENGTH_LONG).show();
+        }
+    });
+ *
  */
 
 public class RxBus {

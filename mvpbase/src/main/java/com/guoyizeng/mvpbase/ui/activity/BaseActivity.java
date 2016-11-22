@@ -1,5 +1,6 @@
 package com.guoyizeng.mvpbase.ui.activity;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
@@ -29,4 +30,8 @@ public abstract class BaseActivity<PresenterType extends Presenter> extends Nucl
     protected abstract int setLayoutResId();
     protected abstract void initView();
     protected abstract void initListener();
+
+    protected Context getContext(){
+        return this;
+    }
 }
