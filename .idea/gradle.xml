@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/fastjsonconverter" />
             <option value="$PROJECT_DIR$/mvpbase" />
+            <option value="$PROJECT_DIR$/rxbus" />
             <option value="$PROJECT_DIR$/umeng" />
             <option value="$PROJECT_DIR$/util" />
             <option value="$PROJECT_DIR$/xmpp" />
