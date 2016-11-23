@@ -28,7 +28,7 @@ ext {
             rxandroid       : "1.2.1",
             okhttp3_logging : "3.2.0",
             androideventbus : "1.0.5.1",
-            fresco          : "0.13.0",
+            fresco          : "0.14.1",
             util            : "1.3.3",
             fastjson        : "1.2.12"
     ]
@@ -57,8 +57,6 @@ ext {
             okhttp             : "com.squareup.okhttp3:okhttp:${depsVersion.okhttp}",
             okhttp3_logging    : "com.squareup.okhttp3:logging-interceptor:${depsVersion.okhttp3_logging}",
 
-            //eventbus，优点：解耦，缺点：耗性能    小项目使用，大项目不建议使用
-            //androideventbus    : "org.simple:androideventbus:${depsVersion.androideventbus}",
             fresco             : "com.facebook.fresco:fresco:${depsVersion.fresco}",
             util               : "com.blankj:utilcode:${depsVersion.util}",
 
